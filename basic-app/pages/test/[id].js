@@ -1,12 +1,10 @@
 import {getAllPosts} from "../../lib/posts";
 import {getPostById} from "../../lib/posts";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Layout from "../components/Layout";
 import Date from "../components/Date";
 
 export default function TestId({postData}){
-    return <>
-            <Header/>
+    return <Layout>
             <section>
                   <ul>
                   <li>{postData.title}</li>
@@ -15,9 +13,8 @@ export default function TestId({postData}){
                     {/* <li>{postData.date}</li> */}
                   </ul>
                 </section>
-              <Footer/>
-            </>
-}
+              </Layout>
+  }
 
 export async function getStaticPaths() {
     const paths = getAllPosts()

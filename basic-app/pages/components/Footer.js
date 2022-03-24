@@ -1,6 +1,6 @@
 export default function Footer(){
 
-    return <footer>
+    return <div className="Footer">
             <h4>This is footer component</h4>
-    </footer>
+    </div>
 }

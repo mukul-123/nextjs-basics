@@ -1,14 +1,12 @@
 import Image from 'next/image'
 import Head from 'next/head'
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import { getAllPosts } from "../../lib/posts"
 import Link from 'next/link'
+import Layout from '../components/Layout';
 
 export default function Test({allPostsData}){
     const imgUrl="/images/profile.jpg";
-    return <>
-            <Header/>
+    return <Layout>
             <section>
             <Image
                 src="/images/profile.jpg"
@@ -22,8 +20,7 @@ export default function Test({allPostsData}){
                   </ul>
                 })}
                 </section>
-              <Footer/>
-            </>
+            </Layout>
 }
 
 export async function getStaticProps() {
